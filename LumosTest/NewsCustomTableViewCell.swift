@@ -31,12 +31,24 @@ final class NewsCustomTableViewCell: UITableViewCell {
         return label
     }()
     
-    private lazy var rightStackView: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [timeLabel, descriptionLabel])
-        stack.axis = .vertical
-        stack.distribution = .fillProportionally
+    private let readLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 13, weight: .light)
+        label.numberOfLines = 0
+        label.text = "Read"
+        label.textAlignment = .right
+        label.isHidden = true
+        return label
+    }()
+    
+    private lazy var topStackView: UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [timeLabel, readLabel])
+        stack.axis = .horizontal
+        stack.distribution = .fill
         stack.spacing = 0
-        stack.alignment = .leading
+        stack.alignment = .center
+        stack.heightAnchor.constraint(equalToConstant: 15).isActive = true
+        stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
     }()
     
@@ -56,17 +68,28 @@ final class NewsCustomTableViewCell: UITableViewCell {
     func updateCell(model: News) {
         let image = model.modelImage
         if let url = URL(string: image) {
+            self.image.kf.indicatorType = .activity
             self.image.kf.setImage(with: url)
         }
         timeLabel.text = model.modelDateTime
         descriptionLabel.text = model.modelTitle
+        checkNewsIsRead(model: model)
+    }
+    
+    func checkNewsIsRead(model: News) {
+        if model.isRead {
+            readLabel.isHidden = false
+        } else {
+            readLabel.isHidden = true
+        }
     }
     
     //MARK: - Add subviews
     
     private func setup() {
         contentView.addSubview(image)
-        contentView.addSubview(rightStackView)
+        contentView.addSubview(topStackView)
+        contentView.addSubview(descriptionLabel)
         updateConstraintsIfNeeded()
     }
     
@@ -81,10 +104,17 @@ final class NewsCustomTableViewCell: UITableViewCell {
             $0.left.equalToSuperview().offset(14)
         }
         
-        rightStackView.snp.makeConstraints {
-            $0.centerY.equalToSuperview()
+        topStackView.snp.makeConstraints {
             $0.left.equalTo(image.snp.right).offset(14)
             $0.right.equalToSuperview().inset(10)
+            $0.top.equalTo(image.snp.top)
+        }
+        
+        descriptionLabel.snp.makeConstraints {
+            $0.top.equalTo(topStackView.snp.bottom).offset(6)
+            $0.left.equalTo(image.snp.right).offset(14)
+            $0.right.equalToSuperview().inset(10)
+            $0.bottom.equalTo(image.snp.bottom)
         }
     }
 }

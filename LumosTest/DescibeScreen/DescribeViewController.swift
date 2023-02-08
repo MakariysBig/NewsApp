@@ -5,16 +5,20 @@ final class DescribeViewController: UIViewController {
     
     //MARK: - Properties
     
-    private var news: News
     private let repository = Repository()
+    private let news: News
+    private let index: Int
+    
+    weak var delegate: ReadProtocol?
     private var rootView: DescribeView {
         view as! DescribeView
     }
     
     //MARK: - Initialise
     
-    init(news: News) {
+    init(news: News, index: Int) {
         self.news = news
+        self.index = index
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -31,6 +35,11 @@ final class DescribeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        delegate?.markNewsRead(index: index)
     }
     
     //MARK: - Private methods

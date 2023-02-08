@@ -8,7 +8,6 @@ protocol Endpoint {
     var method: String { get }
 }
 //MARK: - News Endpoint
-//https://gfeheb.space/api/v2/news
 
 enum NewsEndpoint: Endpoint {
     case getData
