@@ -9,7 +9,7 @@ final class NetworkEngine {
         components.path = endpoint.path
         components.queryItems = endpoint.parameters
 
-
+        
         guard let url = components.url else { return }
 
         var urlRequest = URLRequest(url: url)

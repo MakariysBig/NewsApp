@@ -4,13 +4,12 @@ final class NewsViewController: UIViewController {
     
     //MARK: - Properties
     
+    private var newsArray = [News]()
     private var rootView: NewsView {
         view as! NewsView
     }
         
     private let repository = Repository()
-    private var newsArray = [News]()
-    private let newsDataBase = NewsRepository()
     
     //MARK: - Livecycle
     
@@ -20,7 +19,6 @@ final class NewsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        newsArray = newsDataBase.getAllNews()
         setup()
     }
     
@@ -94,7 +92,17 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let vc = DescribeViewController(news: newsArray[indexPath.row])
+        let vc = DescribeViewController(news: newsArray[indexPath.row], index: indexPath.row)
+        vc.delegate = self
         navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+//MARK: - Extension: ReadProtocol
+
+extension NewsViewController: ReadProtocol {
+    func markNewsRead(index: Int) {
+        newsArray[index].isRead = true
+        rootView.tableView.reloadData()
     }
 }

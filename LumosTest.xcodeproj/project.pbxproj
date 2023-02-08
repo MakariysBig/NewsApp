@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ABDEA18A299282C8009BE0C5 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = ABDEA189299282C8009BE0C5 /* Kingfisher */; };
+		ABDEA18C29928479009BE0C5 /* ReadProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDEA18B29928479009BE0C5 /* ReadProtocol.swift */; };
 		ABE54E9C298A79270018E344 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE54E9B298A79270018E344 /* AppDelegate.swift */; };
 		ABE54E9E298A79270018E344 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE54E9D298A79270018E344 /* SceneDelegate.swift */; };
 		ABE54EA5298A79290018E344 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE54EA4298A79290018E344 /* Assets.xcassets */; };
@@ -18,18 +20,13 @@
 		ABE54EDB298A7CE20018E344 /* NetworkEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE54EC8298A7CE20018E344 /* NetworkEngine.swift */; };
 		ABE54EE0298A7D090018E344 /* NewsCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE54EDF298A7D090018E344 /* NewsCustomTableViewCell.swift */; };
 		ABE54EE3298A93580018E344 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = ABE54EE2298A93580018E344 /* SnapKit */; };
-		ABE54EE6298A937D0018E344 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = ABE54EE5298A937D0018E344 /* Kingfisher */; };
 		ABE54EED298A93F80018E344 /* DescribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE54EE8298A93F80018E344 /* DescribeViewController.swift */; };
 		ABE54EEE298A93F80018E344 /* DescribeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE54EE9298A93F80018E344 /* DescribeView.swift */; };
 		ABE54EF0298A93F80018E344 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE54EEC298A93F80018E344 /* NewsModel.swift */; };
-		ABE54EF5298BC5D90018E344 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE54EF4298BC5D90018E344 /* DBManager.swift */; };
-		ABE54EF7298BC6310018E344 /* DebtScreenRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE54EF6298BC6300018E344 /* DebtScreenRepository.swift */; };
-		ABE54EFA298BC6A30018E344 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = ABE54EF9298BC6A30018E344 /* Realm */; };
-		ABE54EFC298BC6A30018E344 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ABE54EFB298BC6A30018E344 /* RealmSwift */; };
-		ABE54EFE298BC7C10018E344 /* DBNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE54EFD298BC7C10018E344 /* DBNewsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ABDEA18B29928479009BE0C5 /* ReadProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadProtocol.swift; sourceTree = "<group>"; };
 		ABE54E98298A79270018E344 /* LumosTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LumosTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE54E9B298A79270018E344 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABE54E9D298A79270018E344 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,9 +42,6 @@
 		ABE54EE8298A93F80018E344 /* DescribeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescribeViewController.swift; sourceTree = "<group>"; };
 		ABE54EE9298A93F80018E344 /* DescribeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescribeView.swift; sourceTree = "<group>"; };
 		ABE54EEC298A93F80018E344 /* NewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
-		ABE54EF4298BC5D90018E344 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
-		ABE54EF6298BC6300018E344 /* DebtScreenRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtScreenRepository.swift; sourceTree = "<group>"; };
-		ABE54EFD298BC7C10018E344 /* DBNewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBNewsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABE54EFC298BC6A30018E344 /* RealmSwift in Frameworks */,
-				ABE54EFA298BC6A30018E344 /* Realm in Frameworks */,
-				ABE54EE6298A937D0018E344 /* Kingfisher in Frameworks */,
+				ABDEA18A299282C8009BE0C5 /* Kingfisher in Frameworks */,
 				ABE54EE3298A93580018E344 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,7 +76,6 @@
 		ABE54E9A298A79270018E344 /* LumosTest */ = {
 			isa = PBXGroup;
 			children = (
-				ABE54EF3298BC5B80018E344 /* DBManager */,
 				ABE54EB4298A7C090018E344 /* Delegate */,
 				ABE54EB6298A7CE10018E344 /* NetworkLayer */,
 				ABE54EB5298A7C1F0018E344 /* NewsScreen */,
@@ -139,6 +130,7 @@
 			children = (
 				ABE54EE8298A93F80018E344 /* DescribeViewController.swift */,
 				ABE54EE9298A93F80018E344 /* DescribeView.swift */,
+				ABDEA18B29928479009BE0C5 /* ReadProtocol.swift */,
 			);
 			path = DescibeScreen;
 			sourceTree = "<group>";
@@ -149,16 +141,6 @@
 				ABE54EEC298A93F80018E344 /* NewsModel.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		ABE54EF3298BC5B80018E344 /* DBManager */ = {
-			isa = PBXGroup;
-			children = (
-				ABE54EF4298BC5D90018E344 /* DBManager.swift */,
-				ABE54EF6298BC6300018E344 /* DebtScreenRepository.swift */,
-				ABE54EFD298BC7C10018E344 /* DBNewsModel.swift */,
-			);
-			name = DBManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,9 +161,7 @@
 			name = LumosTest;
 			packageProductDependencies = (
 				ABE54EE2298A93580018E344 /* SnapKit */,
-				ABE54EE5298A937D0018E344 /* Kingfisher */,
-				ABE54EF9298BC6A30018E344 /* Realm */,
-				ABE54EFB298BC6A30018E344 /* RealmSwift */,
+				ABDEA189299282C8009BE0C5 /* Kingfisher */,
 			);
 			productName = LumosTest;
 			productReference = ABE54E98298A79270018E344 /* LumosTest.app */;
@@ -213,8 +193,7 @@
 			mainGroup = ABE54E8F298A79270018E344;
 			packageReferences = (
 				ABE54EE1298A93580018E344 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				ABE54EE4298A937D0018E344 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				ABE54EF8298BC6A30018E344 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				ABDEA188299282C8009BE0C5 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = ABE54E99298A79270018E344 /* Products */;
 			projectDirPath = "";
@@ -242,16 +221,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABE54EF7298BC6310018E344 /* DebtScreenRepository.swift in Sources */,
 				ABE54E9C298A79270018E344 /* AppDelegate.swift in Sources */,
-				ABE54EFE298BC7C10018E344 /* DBNewsModel.swift in Sources */,
 				ABE54ED8298A7CE20018E344 /* Repository.swift in Sources */,
 				ABE54EF0298A93F80018E344 /* NewsModel.swift in Sources */,
+				ABDEA18C29928479009BE0C5 /* ReadProtocol.swift in Sources */,
 				ABE54EB2298A7B5F0018E344 /* NewsView.swift in Sources */,
 				ABE54E9E298A79270018E344 /* SceneDelegate.swift in Sources */,
 				ABE54EB0298A7A260018E344 /* NewsViewController.swift in Sources */,
 				ABE54EE0298A7D090018E344 /* NewsCustomTableViewCell.swift in Sources */,
-				ABE54EF5298BC5D90018E344 /* DBManager.swift in Sources */,
 				ABE54EDB298A7CE20018E344 /* NetworkEngine.swift in Sources */,
 				ABE54EEE298A93F80018E344 /* DescribeView.swift in Sources */,
 				ABE54ECE298A7CE20018E344 /* Endpoints.swift in Sources */,
@@ -463,6 +440,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		ABDEA188299282C8009BE0C5 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		ABE54EE1298A93580018E344 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -471,44 +456,18 @@
 				kind = branch;
 			};
 		};
-		ABE54EE4298A937D0018E344 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		ABE54EF8298BC6A30018E344 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		ABDEA189299282C8009BE0C5 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABDEA188299282C8009BE0C5 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		ABE54EE2298A93580018E344 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = ABE54EE1298A93580018E344 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		ABE54EE5298A937D0018E344 /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = ABE54EE4298A937D0018E344 /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
-		};
-		ABE54EF9298BC6A30018E344 /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = ABE54EF8298BC6A30018E344 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = Realm;
-		};
-		ABE54EFB298BC6A30018E344 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = ABE54EF8298BC6A30018E344 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
